@@ -1,13 +1,131 @@
-.navbar{
+/* Configuración básica */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f5f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 30px;
-    background-color: #a4a4a4;
+    padding: 15px 30px;
+    background-color: #e0e0e0;
 }
 
-.opciones{
+.nombreNav {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #004d40;
+}
+
+.opciones {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 20px;
+    font-size: 0.95rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.opciones .login-btn {
+    background-color: #005a5b;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Sección Topping (Arriba) */
+.topping {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 30px;
+    align-items: center;
+}
+
+.textoizq h1 {
+    font-size: 2.2rem;
+    color: #0d1b2a;
+    margin-bottom: 15px;
+}
+
+.textoizq p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.Comenzar {
+    background-color: #005a5b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.imgArriba {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.imgArriba img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sección Servicios (Abajo) */
+.servicios {
+    padding: 20px 30px 40px 30px;
+}
+
+.txtAbajo {
+    text-align: center;
+    color: #004d40;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.servicioBox {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.servicioBox img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    background-color: #eee;
+}
+
+.servicioBox p {
+    padding: 15px 5px;
 }
