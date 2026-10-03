@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Guía de Estudio</title>
+    <!-- Aquí vinculamos el archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR: Ejemplo de Flexbox y posicionamiento sticky -->
+    <header class="navbar">
+        <div class="logo">DevExam</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#grid-ejemplo">Tarjetas Grid</a></li>
+                <li><a href="#formulario">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION: Ejemplo de imagen de fondo, gradiente y centrado -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Guía de Estudio HTML/CSS</h1>
+            <p>Analiza el código de esta página para entender Flexbox, Grid y Responsive Design.</p>
+            <a href="#formulario" class="btn">Ir al Formulario</a>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION: Ejemplo de CSS Grid para crear tarjetas (cards) -->
+    <section id="grid-ejemplo" class="features">
+        <h2>Conceptos Clave</h2>
+        <div class="grid-container">
+            <article class="card">
+                <h3>HTML Semántico</h3>
+                <p>Uso estructurado de etiquetas como section, article, nav y header en lugar de usar puros divs.</p>
+            </article>
+            <article class="card">
+                <h3>Flexbox</h3>
+                <p>Perfecto para alineación unidireccional, como la barra de navegación o centrar elementos.</p>
+            </article>
+            <article class="card">
+                <h3>CSS Grid</h3>
+                <p>Ideal para maquetación bidimensional, como esta cuadrícula de tarjetas que se adapta a la pantalla.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- FORM SECTION: Ejemplo de estructura de formularios -->
+    <section id="formulario" class="contact">
+        <h2>Pon a prueba tus conocimientos</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="juan@ejemplo.com" required>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Datos</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Repaso para Examen de Programación. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
