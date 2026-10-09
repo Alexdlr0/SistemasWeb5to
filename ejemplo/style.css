@@ -1,0 +1,207 @@
+/* 1. VARIABLES Y RESET: Buenas prácticas para iniciar cualquier proyecto */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #f3f4f6;
+    --text-color: #1f2937;
+    --bg-color: #ffffff;
+    --hover-color: #1d4ed8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Crucial: incluye el padding y border en el ancho total */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Efecto de desplazamiento suave en los enlaces ancla */
+}
+
+/* 2. FLEXBOX: Barra de navegación */
+.navbar {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex; /* Activa Flexbox */
+    justify-content: space-between; /* Separa el logo de los enlaces */
+    align-items: center; /* Centra verticalmente */
+    padding: 1rem 5%;
+    position: sticky; /* Mantiene la barra arriba al hacer scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Espacio entre los elementos de la lista */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+/* 3. HERO SECTION Y FONDOS */
+.hero {
+    /* Gradiente oscuro sobre una imagen de marcador de posición */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+/* 4. BOTONES Y TRANSICIONES */
+.btn, .btn-submit {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover, .btn-submit:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px); /* Efecto de elevarse ligeramente */
+}
+
+/* 5. CSS GRID: Sección de Tarjetas */
+.features {
+    padding: 5rem 5%;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    /* Truco avanzado de Grid: crea columnas responsivas sin media queries */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* 6. ESTILIZADO DE FORMULARIOS */
+.contact {
+    padding: 5rem 5%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color); /* Resalta el borde al hacer clic */
+}
+
+.btn-submit {
+    width: 100%;
+}
+
+/* 7. FOOTER */
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* 8. MEDIA QUERIES: Diseño Responsivo (Mobile First o Desktop First) */
+@media screen and (max-width: 768px) {
+    /* Cuando la pantalla sea menor a 768px (tablets y celulares) */
+    .navbar {
+        flex-direction: column; /* Apila el logo y los enlaces */
+        padding: 1rem;
+    }
+
+    .navbar ul {
+        margin-top: 1rem;
+        flex-direction: column; /* Apila los enlaces */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Letra más pequeña en móviles */
+    }
+}

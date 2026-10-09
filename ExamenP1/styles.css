@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+.logo-nav{
+    width: 5%;
+    height: 5%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.logo-nav img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.opciones-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-nav{
+    background-color: #D87962;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 4px;
+}
+
+.seccion1{
+    background-image: url("./src/playa.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    
+}
+.txt-sc1{
+    margin-left: 50%;
+    align-content: center;
+}
+
+.seccion1 h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.seccion1 h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 10px;
+}
+.seccion1 p{
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.seccion2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.seccion3{
+
+}
+
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.box{
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+.box img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+.seccion4{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 30px;
+    align-items: center;
+}
+.img-sc4{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    ;
+}
